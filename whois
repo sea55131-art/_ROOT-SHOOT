@@ -187,7 +187,6 @@
             <tbody id="rank-body"></tbody>
         </table>
     </div>
-</div>
 
 <script>
     const data = [
@@ -314,13 +313,13 @@
                 name: playerInfo.name,
                 score: score,
                 timestamp: Date.now()
-            }).then(() => {
-                console.log("새로운 지킴이 등록 완료!");
-                displayRank(); // 저장 후 랭킹 새로고침
-            });
-        }
-    });
-}
+                }).then(() => {
+                    console.log("새로운 지킴이 등록 완료!");
+                    displayRank(); // 저장 후 랭킹 새로고침
+                    });
+            }
+        });
+    }
 
     function displayRank() {
         const ranks = JSON.parse(localStorage.getItem('gimhae_ranks')) || [];
